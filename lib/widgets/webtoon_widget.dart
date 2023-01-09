@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:toons/widgets/defail_screen.dart';
+import 'package:toons/screens/detail_screen.dart';
 
 class Webtoon extends StatelessWidget {
   final String title, thumb, id;
@@ -33,26 +33,29 @@ class Webtoon extends StatelessWidget {
       },
       child: Column(
         children: [
-          Container(
-            clipBehavior: Clip.hardEdge,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  offset: const Offset(7, 7),
-                  color: Colors.black.withOpacity(0.4),
-                  blurRadius: 12, // soften the shadow
-                  // spreadRadius: 1, //extend the shadow
-                ),
-              ],
+          Hero(
+            tag: id,
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    offset: const Offset(5, 5),
+                    color: Colors.black.withOpacity(0.4),
+                    blurRadius: 10, // soften the shadow
+                    // spreadRadius: 1, //extend the shadow
+                  ),
+                ],
+              ),
+              width: 250,
+              child: Image.network(thumb),
             ),
-            width: 250,
-            child: Image.network(thumb),
           ),
           const SizedBox(height: 10),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 22,
               // fontWeight: FontWeight.w600,
             ),

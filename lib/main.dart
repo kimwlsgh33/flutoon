@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:toons/screens/home_screen.dart';
-import 'package:toons/services/api_service.dart';
 
 void main(List<String> args) {
   runApp(App());
