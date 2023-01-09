@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:toons/screens/home_screen.dart';
-import 'package:toons/services/api_service.dart';
 
 void main(List<String> args) {
   runApp(App());
 }
 
+// make stateful widget
 class App extends StatelessWidget {
-  // key is required for stateful widgets to be able to rebuild ( it's a unique identifier )
-  const App({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return (MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        textTheme: const TextTheme(
+          titleLarge: TextStyle(
+            color: Colors.red,
+          ),
+        ),
+      ),
       home: HomeScreen(),
-    ));
+    );
   }
 }
