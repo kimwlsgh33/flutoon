@@ -14,11 +14,13 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Toons',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.w600,
-            )),
+        title: const Text(
+          'Toons',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         backgroundColor: Colors.white,
         foregroundColor: Colors.green,
         elevation: 0,
